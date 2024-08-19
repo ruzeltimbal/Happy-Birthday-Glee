@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Glee</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f8ff;
+        }
+        .container {
+            text-align: center;
+        }
+        .birthday-message {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            font-size: 2.5em;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            z-index: 10;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .birthday-message h1 {
+            margin: 0;
+            padding: 20px;
+            background-color: #ff69b4;
+            border-radius: 15px;
+        }
+        .birthday-message p {
+	    justify-content: center;
+            margin: 15px 0;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="IMG_20240819_115340.jpg" alt="Glee's Picture" onclick="showMessage()">
+    </div>
+    <div class="birthday-message" id="message">
+        <h1>Happy Birthday, Glee!</h1>
+        <p><br><br>Happy Birthday, Glee! Oli and I love you so much.</p>
+	<p>Wishing you a day filled with joy and happiness.</p>
+	<p>You're the best thing that ever happened to us.</p>
+        <button onclick="hideMessage()">Close</button>
+    </div>
+
+    <script>
+        function showMessage() {
+            document.getElementById('message').style.display = 'flex';
+        }
+        function hideMessage() {
+            document.getElementById('message').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
